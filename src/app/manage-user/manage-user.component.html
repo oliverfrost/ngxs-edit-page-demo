@@ -1,0 +1,22 @@
+<h2>Manage User</h2>
+
+<form [formGroup]="form"> 
+    <div>
+        <label for="">Name</label>
+        <input type="text" formControlName="name">
+    </div>
+    <div>
+        <label for="">Lastname</label>
+        <input type="text" formControlName="lastname">
+    </div>
+    <div>
+        <label for="">Age</label>
+        <input type="number" formControlName="age">
+    </div>
+    <div>
+        <label for="">Company</label>
+        <input type="text" formControlName="company">
+    </div>
+</form>
+
+<button (click)="onSubmit()">Save user</button>

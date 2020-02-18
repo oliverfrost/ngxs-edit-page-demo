@@ -1,0 +1,7 @@
+<h2>List Users</h2>
+
+<ul *ngIf="users$ | async as users; else loading">
+    <li *ngFor="let user of users" [routerLink]="['/users', user.id]" (click)="onSelectUser(user.id)">{{user.name}} {{user.lastname}} {{user.age}} old</li>
+</ul>
+
+<ng-template #loading>Loading ... Please wait</ng-template>
